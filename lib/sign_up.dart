@@ -1,29 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:login_register/sign_up.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(SignUpPage());
 }
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      debugShowCheckedModeBanner: false,
-      routes: <String, WidgetBuilder>{
-        '/sign_up': (BuildContext) => new SignUpPage()
-      },
-      home: new MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => new _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -90,24 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.green))),
                 ),
-                SizedBox(
-                  height: 5.0,
-                ),
-                Container(
-                  alignment: Alignment(1.0, 0.0),
-                  padding: EdgeInsets.only(top: 15.0, left: 20.0),
-                  child: InkWell(
-                    child: Text(
-                      'Forget Password',
-                      style: TextStyle(
-                          color: Colors.green,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Arial',
-                          decoration: TextDecoration.underline),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 40.0),
+                SizedBox(height: 45.0),
                 Container(
                   height: 40.0,
                   child: Material(
@@ -116,12 +80,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.green,
                     elevation: 7.0,
                     child: GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).pushNamed('/sign_up');
-                      },
+                      onTap: () {},
                       child: Center(
                         child: Text(
-                          'LOGIN',
+                          'SIGNUP',
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 14.0,
@@ -150,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: <Widget>[
                         Center(
                           child: Text(
-                            'Login with facebook',
+                            'SignUp with facebook',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         )
